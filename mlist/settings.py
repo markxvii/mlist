@@ -13,6 +13,9 @@ else:
     prefix='sqlite:////'
 
 class BaseConfig:
+    LOCALES=['en_US','zh_Hans_CN']
+    BABEL_DEFAULT_LOCALE=LOCALES[0]
+
     ITEM_PER_PAGE=20
 
     SECRET_KEY=os.getenv('SECRET_KEY','secret key')

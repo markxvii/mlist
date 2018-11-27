@@ -1,0 +1,165 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-11-27 15:36+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: mlist/__init__.py:65
+msgid "Bad Request"
+msgstr ""
+
+#: mlist/__init__.py:69
+msgid "Forbidden"
+msgstr ""
+
+#: mlist/__init__.py:73
+msgid "Page Not Found"
+msgstr ""
+
+#: mlist/__init__.py:77
+msgid "Server Error"
+msgstr ""
+
+#: mlist/extensions.py:20
+msgid "Please login to access this page."
+msgstr ""
+
+#: mlist/blueprints/auth.py:31
+msgid "Login success."
+msgstr ""
+
+#: mlist/blueprints/auth.py:32
+msgid "Invalid username or password."
+msgstr ""
+
+#: mlist/blueprints/auth.py:40
+msgid "Logout success."
+msgstr ""
+
+#: mlist/blueprints/auth.py:54
+msgid "Witness something truly majestic"
+msgstr ""
+
+#: mlist/blueprints/auth.py:55
+msgid "Help a complete stranger"
+msgstr ""
+
+#: mlist/blueprints/auth.py:56
+msgid "Drive a motorcycle on the Great Wall of China"
+msgstr ""
+
+#: mlist/blueprints/auth.py:57
+msgid "Sit on the Great Egyptian Pyramids"
+msgstr ""
+
+#: mlist/blueprints/auth.py:62
+msgid "Generate success."
+msgstr ""
+
+#: mlist/blueprints/home.py:24
+msgid "Invalid locale"
+msgstr ""
+
+#: mlist/blueprints/home.py:25
+msgid "Setting updated."
+msgstr ""
+
+#: mlist/blueprints/todo.py:30 mlist/blueprints/todo.py:46
+msgid "Invalid item body."
+msgstr ""
+
+#: mlist/blueprints/todo.py:42 mlist/blueprints/todo.py:57
+#: mlist/blueprints/todo.py:69
+msgid "Permission denied."
+msgstr ""
+
+#: mlist/blueprints/todo.py:49
+msgid "Item updated."
+msgstr ""
+
+#: mlist/blueprints/todo.py:61
+msgid "Item toggled."
+msgstr ""
+
+#: mlist/blueprints/todo.py:73
+msgid "Item deleted."
+msgstr ""
+
+#: mlist/blueprints/todo.py:83
+msgid "All clear!"
+msgstr ""
+
+#: mlist/templates/_app.html:6
+msgid "What needs to be done?"
+msgstr ""
+
+#: mlist/templates/_app.html:13
+msgid "All"
+msgstr ""
+
+#: mlist/templates/_app.html:18
+msgid "Active"
+msgstr ""
+
+#: mlist/templates/_app.html:23
+msgid "Done"
+msgstr ""
+
+#: mlist/templates/_intro.html:6
+msgid "A simple to-do list app."
+msgstr ""
+
+#: mlist/templates/_intro.html:14
+msgid "demo.png"
+msgstr ""
+
+#: mlist/templates/_intro.html:18
+msgid "Sign in!"
+msgstr ""
+
+#: mlist/templates/_login.html:5 mlist/templates/_login.html:14
+#: mlist/templates/base.html:18 mlist/templates/base.html:38
+msgid "Login"
+msgstr ""
+
+#: mlist/templates/_login.html:13
+msgid "Get a test account"
+msgstr ""
+
+#: mlist/templates/_login.html:16
+msgid "Toggle Password"
+msgstr ""
+
+#: mlist/templates/base.html:36
+msgid "Logout"
+msgstr ""
+
+#: mlist/templates/errors.html:22
+msgid "Back Home"
+msgstr ""
+
+#: mlist/templates/index.html:27
+msgid "Oops, something was wrong!"
+msgstr ""
+
+#: mlist/templates/index.html:28
+msgid "Your todo was empty!"
+msgstr ""
+
+#: mlist/templates/index.html:29
+msgid "Empty username or password!"
+msgstr ""
+

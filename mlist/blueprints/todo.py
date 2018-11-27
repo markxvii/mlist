@@ -4,6 +4,7 @@
 
 from flask import render_template, request, Blueprint, jsonify
 from flask_login import current_user, login_required
+from flask_babel import _
 
 from mlist.extensions import db
 from mlist.models import Item
@@ -26,7 +27,7 @@ def app():
 def new_item():
     data = request.get_json()
     if data is None or data['body'].strip() == '':
-        return jsonify(message='非法字符。'), 400
+        return jsonify(message=_('Invalid item body.')), 400
     item = Item(body=data['body'], author=current_user._get_current_object())
     db.session.add(item)
     db.session.commit()
@@ -38,14 +39,14 @@ def new_item():
 def edit_item(item_id):
     item = Item.query.get_or_404(item_id)
     if current_user != item.author:
-        return jsonify(message='Permission denied.'), 403
+        return jsonify(message=_('Permission denied.')), 403
 
     data = request.get_json()
     if data is None or data['body'].strip() == '':
-        return jsonify(message='Invalid item body.'), 400
+        return jsonify(message=_('Invalid item body.')), 400
     item.body = data['body']
     db.session.commit()
-    return jsonify(message='Item updated.')
+    return jsonify(message=_('Item updated.'))
 
 
 @todo_bp.route('/item/<int:item_id>/toggle', methods=['PATCH'])
@@ -53,11 +54,11 @@ def edit_item(item_id):
 def toggle_item(item_id):
     item = Item.query.get_or_404(item_id)
     if current_user != item.author:
-        return jsonify(message='Permission denied.'), 403
+        return jsonify(message=_('Permission denied.')), 403
 
     item.done = not item.done
     db.session.commit()
-    return jsonify(message='Item toggled.')
+    return jsonify(message=_('Item toggled.'))
 
 
 @todo_bp.route('/item/<int:item_id>/delete', methods=['DELETE'])
@@ -65,11 +66,11 @@ def toggle_item(item_id):
 def delete_item(item_id):
     item = Item.query.get_or_404(item_id)
     if current_user != item.author:
-        return jsonify(message='Permission denied.'), 403
+        return jsonify(message=_('Permission denied.')), 403
 
     db.session.delete(item)
     db.session.commit()
-    return jsonify(message='Item deleted.')
+    return jsonify(message=_('Item deleted.'))
 
 
 @todo_bp.route('/item/clear', methods=['DELETE'])
@@ -79,4 +80,4 @@ def clear_items():
     for item in items:
         db.session.delete(item)
     db.session.commit()
-    return jsonify(message='All clear!')
+    return jsonify(message=_('All clear!'))
